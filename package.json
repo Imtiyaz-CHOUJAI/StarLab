@@ -3,14 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@types/graphql": "^14.2.2",
+    "apollo-boost": "^0.4.3",
+    "apollo-datasource-rest": "^0.5.1",
+    "apollo-server-express": "^2.6.9",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-apollo-hooks": "^0.5.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "serve": "nodemon --exec babel-node ./server/server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "dev": "concurrently \"yarn start\" \"yarn serve\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +42,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "concurrently": "^4.1.1",
+    "nodemon": "^1.19.1"
   }
 }
