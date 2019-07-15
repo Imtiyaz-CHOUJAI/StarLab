@@ -4,10 +4,10 @@ const typeDefs = gql`
   type Repository {
     id: Int!
     name: String!
-    full_name: String!
+    full_name: String
     owner: Owner!
     html_url: String!
-    description: String!
+    description: String
     stargazers_count: Int!
     open_issues: String!
     created_at: String!
@@ -18,7 +18,7 @@ const typeDefs = gql`
     login: String!
   }
   type Query {
-    repositories(page: Int): [Repository]
+    repositories(page: Int, created_at: String): [Repository]
   }
 `;
 
