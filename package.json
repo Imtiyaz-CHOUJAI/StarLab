@@ -25,11 +25,11 @@
     "sweetalert": "^2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "serve": "nodemon --exec babel-node ./server/server.js",
-    "build": "react-scripts build",
-    "dev": "concurrently \"yarn start\" \"yarn serve\"",
-    "eject": "react-scripts eject"
+    "start": "concurrently \"yarn client\" \"yarn server\"",
+    "client": "react-scripts start",
+    "server": "nodemon --exec babel-node ./server/server.js",
+    "clinet-build": "react-scripts build",
+    "client-eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
