@@ -1,7 +1,8 @@
 /**
  * Capitalize strings first letter
  *
- * @param {String} string
+ * @param {string} string
+ * @return {string}
  */
 export const Capitalize = string => {
   if (typeof string !== "string") {
