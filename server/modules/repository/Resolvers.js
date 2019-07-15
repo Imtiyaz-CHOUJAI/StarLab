@@ -1,7 +1,7 @@
 const resolvers = {
   Query: {
-    repositories: (root, {page}, {dataSources}) =>
-      dataSources.GithubApi.getRepositories({page}),
+    repositories: (root, {page, created_at}, {dataSources}) =>
+      dataSources.githubApi.getRepositories({page, created_at}),
   },
 };
 
