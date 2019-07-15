@@ -1,7 +1,7 @@
 import express from "express";
 import {ApolloServer} from "apollo-server-express";
 
-import GithubApi from "./GithubApi";
+import githubApi from "./githubApi";
 import typeDefs from "./modules/repository/Schema";
 import resolvers from "./modules/repository/Resolvers";
 
@@ -9,7 +9,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources: () => ({
-    GithubApi: new GithubApi(),
+    githubApi: new githubApi(),
   }),
 });
 
