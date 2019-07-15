@@ -1,0 +1,17 @@
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 10px 0px;
+  background-color: #212121;
+  color: #fff;
+
+  * {
+    display: inherit !important;
+  }
+
+  &:not(:first-child) {
+    margin-right: 10px;
+  }
+}

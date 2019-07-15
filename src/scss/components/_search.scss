@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 35px;
+  margin: auto;
+  max-width: 600px;
+
+  &__label {
+    width: 50%;
+  }
+
+  &__input {
+    width: 50%;
+  }
+}

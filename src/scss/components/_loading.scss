@@ -1,0 +1,13 @@
+.loading {
+  position: fixed;
+  bottom: 5%;
+  right: 0;
+  width: 100%;
+  // color: ;
+  font-size: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  transition: all 0.8s;
+}
