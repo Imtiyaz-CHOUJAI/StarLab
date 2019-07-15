@@ -1,20 +1,21 @@
 const {RESTDataSource} = require("apollo-datasource-rest");
 
-class GithubApi extends RESTDataSource {
+class githubApi extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = "https://api.github.com/search";
   }
 
   async getRepositories({
-    q = "created:>2017-10-22",
+    q = "created:>",
+    created_at = "2017-10-22",
     sort = "stars",
     order = "desc",
     page = 1,
-    per_page = 10,
+    per_page = 25,
   }) {
     const result = await this.get("repositories", {
-      q,
+      q: `${q}${created_at}`,
       sort,
       order,
       page,
@@ -25,4 +26,4 @@ class GithubApi extends RESTDataSource {
   }
 }
 
-export default GithubApi;
+export default githubApi;
